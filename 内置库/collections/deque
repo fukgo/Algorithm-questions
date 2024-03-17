@@ -1,0 +1,30 @@
+append(x)：添加 x 到右端。
+
+appendleft(x)：添加 x 到左端。
+
+clear()：移除所有元素，使其长度为0.
+
+copy()：创建一份浅拷贝。3.5 新版功能.
+
+count(x)：计算deque中个数等于 x 的元素。3.2 新版功能.
+
+extend(iterable)：扩展deque的右侧，通过添加iterable参数中的元素。
+
+extendleft(iterable)：扩展deque的左侧，通过添加iterable参数中的元素。注意，左添加时，在结果中iterable参数中的顺序将被反过来添加。
+
+index(x[, start[, stop]])：返回第 x 个元素（从 start 开始计算，在 stop 之前）。返回第一个匹配，如果没找到的话，升起 ValueError 。3.5 新版功能.
+
+insert(i, x)：在位置 i 插入 x 。如果插入会导致一个限长deque超出长度 maxlen 的话，就升起一个 IndexError 。3.5 新版功能.
+
+pop()：移去并且返回一个元素，deque最右侧的那一个。如果没有元素的话，就升起 IndexError 索引错误。
+
+popleft()：移去并且返回一个元素，deque最左侧的那一个。如果没有元素的话，就升起 IndexError 索引错误。
+
+remove(value)：移去找到的第一个 value。 如果没有的话就升起 ValueError 。
+
+reverse()：将deque逆序排列。返回 None 。3.2 新版功能.
+
+rotate(n=1)：向右循环移动 n 步。 如果 n 是负数，就向左循环。如果deque不是空的，向右循环移动一步就等价于 d.appendleft(d.pop()) ， 向左循环一步就等价于 d.append(d.popleft()) 。
+
+Deque对象同样提供了一个只读属性:
+maxlen：Deque的最大尺寸，如果没有限定的话就是 None 。
